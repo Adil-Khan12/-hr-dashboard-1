@@ -23,7 +23,8 @@ import { EmployeeTableComponent } from './shared/component/employee-table/employ
 import { UserDropdownComponent } from './shared/component/user-dropdown/user-dropdown.component';
 import { ClickOutsideDirective } from './directives/click-outside.directive';
 import { SharedModule } from './shared/shared.module';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,9 @@ import { SharedModule } from './shared/shared.module';
     DashboardModule,
     ReactiveFormsModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [    {
     provide: HTTP_INTERCEPTORS,

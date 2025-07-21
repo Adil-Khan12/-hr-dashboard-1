@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DashboardService {
- private apiUrl = 'http://localhost:3000/dashboardContent';
+ private apiUrl = 'https://amplelogicbackend.onrender.com/dashboardContent';
 
   constructor(private http: HttpClient) {}
 

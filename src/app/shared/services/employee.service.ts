@@ -7,7 +7,7 @@ import { Employee } from '../model/employee.model';
   providedIn: 'root'
 })
 export class EmployeeService {
-  private apiUrl = 'http://localhost:3000/employees';
+  private apiUrl = 'https://amplelogicbackend.onrender.com/employees';
 
   constructor(private http: HttpClient) {}
 

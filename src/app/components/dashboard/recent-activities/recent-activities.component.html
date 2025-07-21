@@ -1,15 +1,12 @@
-
-
-      <div class="card shadow-sm h-100">
-        <div class="card-body">
-          <h5 class="card-title text-center mb-3">Recent Activities</h5>
-          <ul class="list-unstyled scroll-area">
-            <li *ngFor="let activity of activities; let i =index" class="mb-1 text-container d-flex gap-2 align-items-center">
-              <span class="me-2 fs-2" [ngClass]="i > 20 ? 'text-dark' : 'text-success'">•</span>
-              {{ activity.message }}
+<div class="card shadow-sm h-100">
+    <div class="card-body">
+        <h5 class="card-title text-center mb-3">Recent Activities</h5>
+        <ul class="list-unstyled scroll-area">
+            <li *ngFor="let activity of activities; let i =index"
+                class="mb-1 text-container d-flex gap-2 align-items-center">
+                <span class="me-2 fs-2" [ngClass]="i > 20 ? 'text-dark' : 'text-success'">•</span>
+                {{ activity.message }}
             </li>
-          </ul>
-        </div>
-      </div>
-
-  
+        </ul>
+    </div>
+</div>

@@ -17,7 +17,7 @@ isSidebarHidden = false;
       this.isSidebarHidden = hidden;
     });
     const width = window.innerWidth;
-    const element = this.el.nativeElement.querySelector('#sidebar');
+    const element = this.el.nativeElement.querySelector('.sidebar');
 
     if (width < 400) {
       this.renderer.addClass(element, 'hide');

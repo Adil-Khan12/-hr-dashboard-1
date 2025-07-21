@@ -1,42 +1,58 @@
 @import "../../../styles/variables.scss";
+
 .main-dashboard {
-	width: 100%;
-	padding: 12px;
-	font-family: var(--poppins);
-	max-height: calc(100vh - 56px);
-	// overflow-y: auto;
-}
-.recent-chart {
+  width: 100%;
+  padding: 12px;
+  font-family: var(--poppins);
+  max-height: calc(100vh - 56px);
 
-	@media (min-width: 401px) and (max-width: 768px) {
-		gap: 20px;
-	}
-}
-.main-dashboard .head-title {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	grid-gap: 16px;
-	flex-wrap: wrap;	
+  .head-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
 
-}
-.main-dashboard .head-title .left h1 {
-	font-size: 36px;
-	font-weight: 600;
-	margin-bottom: 20px;
-	color: var(--dark);
+    .left {
+      h1 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: var(--dark);
 
-	@media (min-width: 769px) and (max-width: 1024px) {
-		font-size: 24px;
-	}
-	@media (min-width: 401px) and (max-width: 768px) {
-		font-size: 20px;
-	}
-}
+        @media (max-width: 576px) {
+          font-size: 24px;
+        }
 
-.card{
- background: var(--light);
- .card-title{
-    color: var(--dark);
- } 
+        @media (min-width: 769px) and (max-width: 1024px),
+               (min-width: 401px) and (max-width: 768px) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .recent-chart {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--light);
+
+      .card-body {
+        .card-title {
+          color: var(--dark);
+          text-align: center;
+
+          @media (max-width: 768px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
 }

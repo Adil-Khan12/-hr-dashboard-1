@@ -1,161 +1,200 @@
 @import 'variables';
 
 #sidebar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 15%;
-	height: calc(100vh - 56px);
-	background: var(--baseColor);
-	z-index: 2000;
-	font-family: var(--lato);
-	transition: .3s ease;
-	scrollbar-width: none;
-	overflow: hidden;
-	@media (min-width: 769px) and (max-width: 1024px) {
-		width: 20%;
-	}
-	@media (min-width: 401px) and (max-width: 768px) {
-		width: 25%;
-	}
-	
-}
-#sidebar::--webkit-scrollbar {
-	display: none;
-}
-#sidebar.hide {
-	width: 60px;
-}
-#sidebar .brand {
-	font-size: 22px;
-	font-weight: 700;
-	height: 56px;
-	display: flex;
-	align-items: center;
-	color: var(--dark);
-	position: sticky;
-	top: 0;
-	left: 0;
-	background: var(--baseColor);
-	z-index: 500;
-	padding-bottom: 20px;
-	box-sizing: content-box;
-	@media (min-width: 769px) and (max-width: 1024px) {
-		font-size: 20px;
-	}
-	@media (min-width: 401px) and (max-width: 768px) {
-		font-size: 16px;
-		width: 25%;
-	}
-}
-#sidebar .brand .bx {
-	min-width: 60px;
-	display: flex;
-	justify-content: center;
-}
-#sidebar .side-menu {
-	width: 100%;
-	margin-top: 48px;
-	padding-left: 0 !important;
-}
-#sidebar .side-menu li {
-	height: 48px;
-	background: transparent;
-	margin-left: 6px;
-	border-radius: 48px 0 0 48px;
-	padding: 4px;
-}
-#sidebar .side-menu li.active {
-	background: var(--grey);
-	position: relative;
-}
-#sidebar .side-menu li.active::before {
-	content: '';
-	position: absolute;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	top: -40px;
-	right: 0;
-	box-shadow: 20px 20px 0 var(--grey);
-	z-index: -1;
-}
-#sidebar .side-menu li.active::after {
-	content: '';
-	position: absolute;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	bottom: -40px;
-	right: 0;
-	box-shadow: 20px -20px 0 var(--grey);
-	z-index: -1;
-}
-#sidebar .side-menu li a {
-	width: 100%;
-	height: 100%;
-	background: var(--baseColor);
-	display: flex;
-	align-items: center;
-	border-radius: 48px;
-	font-size: 18px;
-	color: var(--dark);
-	white-space: nowrap;
-	overflow-x: hidden;
-	@media (max-width: 1024px) {
-        text-align: start;
-        font-size: 16px;
-      }
-      @media (max-width: 768px) {
-            text-align: start;
-            font-size: 14px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: calc(100vh - 56px);
+  background: var(--baseColor);
+  z-index: 2000;
+  font-family: var(--lato);
+  transition: 0.3s ease;
+  overflow: hidden;
+  scrollbar-width: none;
+  width: 15%;
+
+  @media (max-width: 575px) {
+    width: 54%;
+  }
+
+  @media (min-width: 576px) and (max-width: 768px) {
+    width: 45%;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: 20%;
+  }
+
+  @media (max-width: 768px) {
+    height: calc(100vh - 50px);
+  }
+
+  &.hide {
+    width: 60px;
+  }
+
+  &::--webkit-scrollbar {
+    display: none;
+  }
+
+  .brand {
+    font-size: 22px;
+    font-weight: 700;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    color: var(--dark);
+    background: var(--baseColor);
+    padding-bottom: 20px;
+    box-sizing: content-box;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 500;
+
+    .bx {
+      min-width: 60px;
+      display: flex;
+      justify-content: center;
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  .side-menu {
+    width: 100%;
+    margin-top: 48px;
+    padding-left: 0 !important;
+
+    li {
+      height: 48px;
+      margin-left: 6px;
+      border-radius: 48px 0 0 48px;
+      padding: 4px;
+      background: transparent;
+
+      &.active {
+        background: var(--grey);
+        position: relative;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          right: 0;
+          z-index: -1;
         }
-}
-#sidebar .side-menu.top li.active a {
-	color: $color-light;
-}
-#sidebar.hide .side-menu li a {
-	width: calc(48px - (4px * 2));
-	transition: width .3s ease;
-}
-#sidebar .side-menu li a.logout {
-	color: var(--red);
-	cursor: pointer;
-}
-#sidebar .side-menu.top li a:hover {
-	color: $color-light;
-}
-#sidebar .side-menu li a .bx {
-	min-width: calc(60px  - ((4px + 6px) * 2));
-	display: flex;
-	justify-content: center;
-}
-.switch-mode {
-	display: block;
-	min-width: 50px;
-	height: 25px;
-	border-radius: 25px;
-	background: var(--toggleBg);
-	cursor: pointer;
-	position: relative;
-}
-.switch-mode::before {
-	content: '';
-	position: absolute;
-	top: 2px;
-	left: 2px;
-	bottom: 2px;
-	width: calc(25px - 4px);
-	background: $color-light-toggle;
-	border-radius: 50%;
-	transition: all .3s ease;
-}
-#switch-mode:checked + .switch-mode::before {
-	left: calc(100% - (25px - 4px) - 2px);
-	background: #0d1f17;
-}
-.logout-mode{
-	position: absolute;
+
+        &::before {
+          top: -40px;
+          box-shadow: 20px 20px 0 var(--grey);
+        }
+
+        &::after {
+          bottom: -40px;
+          box-shadow: 20px -20px 0 var(--grey);
+        }
+
+        a {
+          color: $color-light;
+        }
+      }
+
+      a {
+        width: 100%;
+        height: 100%;
+        background: var(--baseColor);
+        display: flex;
+        align-items: center;
+        border-radius: 48px;
+        font-size: 18px;
+        color: var(--dark);
+        white-space: nowrap;
+        overflow-x: hidden;
+
+        .bx {
+          min-width: calc(60px - ((4px + 6px) * 2));
+          display: flex;
+          justify-content: center;
+        }
+
+        &.logout {
+          color: var(--red);
+          cursor: pointer;
+        }
+
+        @media (max-width: 1024px) {
+          font-size: 16px;
+          text-align: start;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
+
+        &:hover {
+          color: $color-light;
+        }
+      }
+    }
+  }
+
+  &.hide .side-menu li a {
+    width: calc(48px - (4px * 2));
+    transition: width 0.3s ease;
+  }
+
+  .logout-mode {
+    position: absolute;
     bottom: 0;
     width: 100%;
+
+    .switch-mode {
+      display: block;
+      min-width: 50px;
+      height: 25px;
+      border-radius: 25px;
+      background: var(--toggleBg);
+      cursor: pointer;
+      position: relative;
+
+      @media (max-width: 1024px) {
+        min-width: 30px;
+        height: 18px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        width: calc(25px - 4px);
+        background: $color-light-toggle;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+
+        @media (max-width: 1024px) {
+          width: calc(25px - 12px);
+        }
+      }
+    }
+
+    #switch-mode:checked + .switch-mode::before {
+      left: calc(100% - (25px - 4px) - 2px);
+      background: #0d1f17;
+	  @media (max-width: 1024px) {
+      left: calc(100% - (25px - 4px) - 6px);
+      }
+    }
+  }
 }

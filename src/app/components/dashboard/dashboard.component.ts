@@ -5,6 +5,7 @@ import { capatalizedFirstCharacter } from 'src/app/utils/utils';
 import { EmployeeService } from 'src/app/shared/services/employee.service';
 import { ChartDataPoint } from 'src/app/shared/component/performance-chart/performance-chart.component';
 import { summary, updateSummaryCounts } from '../../shared/services/dashboard.service';
+import { SharedService } from 'src/app/shared/services/shared.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -17,9 +18,14 @@ export class DashboardComponent implements OnInit {
   activities: any[] = [];
   capitalFirstCharactor = capatalizedFirstCharacter;
   
-  constructor(private dashboardService_: DashboardService, private employeeService_: EmployeeService) { }
+  constructor(private dashboardService_: DashboardService, private employeeService_: EmployeeService,private _sharedService: SharedService) { }
   ngOnInit(): void {
     this.getDashboardContent();
+    const width = window.innerWidth;
+
+    if (width < 768) {
+      this._sharedService.toggleSidebar();
+    } 
   }
   
 

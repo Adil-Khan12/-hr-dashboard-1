@@ -7,7 +7,6 @@
       Comprehensive HR Management
    </h1>
   </div>
-  <!-- <div class="separator"></div> -->
   <div class="auth-form-container flex-grow-1">
 
     <div class="auth-form">
@@ -15,7 +14,7 @@
         WorkZen
       </div>
       <h2 class="heading">Login</h2>
-      <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+      <form class="form-container" [formGroup]="loginForm" (ngSubmit)="submitLogin()">
         <div class="form-group">
           <label>Email</label>
           <input type="text" formControlName="username" placeholder="Enter your username" class="form-control" />

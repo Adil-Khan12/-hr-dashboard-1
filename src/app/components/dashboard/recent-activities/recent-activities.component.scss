@@ -1,21 +1,47 @@
-.card{
- background: var(--light);
- .card-title{
-    color: var(--dark);
- } 
-}
-.text-container {
-    line-height: 28px;
-    color: var(--dark);
-}
-.scroll-area {
-    max-height: 290px;
-    overflow-y: auto;
-    @media (min-width: 769px) and (max-width: 1024px) {
-        max-height: 300px;
+.card {
+    background: var(--light);
+  
+    .card-body {
+      .card-title {
+        color: var(--dark);
+        text-align: center;
+        margin-bottom: 1rem;
+  
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
+      }
+  
+      .scroll-area {
+        max-height: 290px;
+        overflow-y: auto;
+  
+        @media (min-width: 769px) and (max-width: 1024px) {
+          max-height: 300px;
+        }
+  
+        @media (min-width: 401px) and (max-width: 768px) {
+          max-height: 200px;
+        }
+  
+        li.text-container {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          margin-bottom: 0.25rem;
+          line-height: 28px;
+          color: var(--dark);
+  
+          @media (max-width: 768px) {
+            font-size: 12px;
+          }
+  
+          span {
+            margin-right: 0.5rem;
+            font-size: 1.25rem;
+          }
+        }
+      }
     }
-    @media (min-width: 401px) and (max-width: 768px) {
-        max-height: 200px;
-    }
-}
+  }
   

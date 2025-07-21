@@ -3,4 +3,7 @@
 .footer{
     background: var(--baseColor);
     color: var(--dark);
+    @media (max-width: 768px) {
+		font-size: 12px;
+	}
 }

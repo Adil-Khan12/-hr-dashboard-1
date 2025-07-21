@@ -57,3 +57,11 @@
 	background-color: var(--dark);
 	color: var(--light);
 }
+.dropdown-menu .dropdown-item{
+    @media (min-width: 769px) and (max-width: 1024px) {
+        font-size: 14px;
+      }
+    @media (max-width: 768px) {
+        font-size: 12px;
+      }
+}

@@ -4,28 +4,22 @@
     <span *ngIf="!isHidden" class="text">{{firstName(user?.name)}} ({{user?.role}})</span>
   </a>
 
-<ul class="side-menu top">
-  <li *ngFor="let item of menuItems" [class.active]="isActive(item.path)">
-    <a [routerLink]="item.path">
-      <i [class]="item.icon"></i>
-      <span *ngIf="!isHidden" class="text">{{ item.label }}</span>
-    </a>
-  </li>
-</ul>
-
-<div class="logout-mode">
-
-  <ul class="side-menu">
-    <!-- <li>
-      <a (click)="logout()" class="logout">
-        <i class='bx bxs-log-out-circle'></i>
-        <span class="text">Logout</span>
+  <ul class="side-menu top">
+    <li *ngFor="let item of menuItems" [class.active]="isActive(item.path)">
+      <a [routerLink]="item.path">
+        <i [class]="item.icon"></i>
+        <span *ngIf="!isHidden" class="text">{{ item.label }}</span>
       </a>
-    </li> -->
+    </li>
   </ul>
-  <div class="d-flex justify-content-end p-2 ">
-    <input type="checkbox" #switchMode id="switch-mode" hidden>
-    <label for="switch-mode" class="switch-mode"></label>
+
+  <div class="logout-mode">
+
+    <ul class="side-menu">
+    </ul>
+    <div class="d-flex justify-content-start p-2 ">
+      <input type="checkbox" #switchMode id="switch-mode" hidden>
+      <label for="switch-mode" class="switch-mode"></label>
+    </div>
   </div>
-</div>
 </section>

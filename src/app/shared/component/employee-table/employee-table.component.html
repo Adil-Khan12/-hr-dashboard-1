@@ -1,37 +1,37 @@
-<section class="sectionc-top p-5" [ngClass]="className">
+<section class="sectionc-top" [ngClass]="className">
     <h5 [ngClass]="infoHeaderDashboard" class="employee-info-header headerColor">Employee Info</h5>
-    <div [ngClass]="tableContainerDashboard" class="table-responsive" id="no-more-tables">
-        <table class="table table-light table-striped table-hover mb-0white ">
-            <thead class="bg-dark text-light">
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Position</th>
-                    <th>Department</th>
-                    <th>Manager</th>
-                    <th>Location</th>
-                    <th>Joining Date</th>
-                    <th>Salary</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="employee-tr" *ngFor="let emp of employees">
-                    <td data-title="Name">{{ emp.name }}</td>
-                    <td data-title="Email">{{ emp.email }}</td>
-                    <td data-title="Position">{{ emp.role }}</td>
-                    <td data-title="Department">{{ emp.department }}</td>
-                    <td data-title="Manager">{{ emp.manager }}</td>
-                    <td data-title="Location">{{ emp.location }}</td>
-                    <td data-title="Joining Date">{{ emp.joining_date }}</td>
-                    <td data-title="Salary">₹{{ emp.salary | number }}</td>
-                    <td data-title="Status" class="text-center"
-                        [ngClass]="emp?.status?.toLowerCase() === 'active' ? 'active' : (emp?.status?.toLowerCase() === 'on leave' ? 'on-leave': 'inactive')">
-                        <i class="bx bxs-circle" [appTooltip]="capitalFirstCharactor(emp.status)"
-                            tooltipPosition="top" style="margin-right: 4px"></i>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="table-container table-responsive" id="no-more-tables">
+      <table class="table table-light table-striped table-hover mb-0white">
+        <thead class="bg-dark text-light">
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Position</th>
+            <th>Department</th>
+            <th>Manager</th>
+            <th>Location</th>
+            <th>Joining Date</th>
+            <th>Salary</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="employee-tr" *ngFor="let emp of employees">
+            <td data-title="Name">{{ emp.name }}</td>
+            <td data-title="Email">{{ emp.email }}</td>
+            <td data-title="Position">{{ emp.role }}</td>
+            <td data-title="Department">{{ emp.department }}</td>
+            <td data-title="Manager">{{ emp.manager }}</td>
+            <td data-title="Location">{{ emp.location }}</td>
+            <td data-title="Joining Date">{{ emp.joining_date }}</td>
+            <td data-title="Salary">₹{{ emp.salary | number }}</td>
+            <td data-title="Status" class="text-center"
+                [ngClass]="emp?.status?.toLowerCase() === 'active' ? 'active' : (emp?.status?.toLowerCase() === 'on leave' ? 'on-leave': 'inactive')">
+              <i class="bx bxs-circle" [appTooltip]="capitalFirstCharactor(emp.status)" tooltipPosition="top" style="margin-right: 4px"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-</section>
+  </section>
+  

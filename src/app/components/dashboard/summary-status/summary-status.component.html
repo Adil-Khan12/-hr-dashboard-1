@@ -1,5 +1,4 @@
-<div>
-    <h4 class="summary-text">Summary Status</h4>
+<h4 class="summary-text">Summary Status</h4>
 <ul class="box-info">
     <li *ngFor="let item of summary">
         <i [ngClass]="getIconClass(item?.title || '')"></i>
@@ -9,4 +8,3 @@
         </span>
     </li>
 </ul>
-</div>

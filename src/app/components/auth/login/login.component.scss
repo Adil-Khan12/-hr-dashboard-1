@@ -1,163 +1,168 @@
-
 @import '../../../../styles/variables';
+
 .auth-container {
   display: flex;
   height: 100vh;
   width: 100vw;
   background-color: #f0f0f3;
   box-sizing: border-box;
-}
-.auth-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 49.5%;
-  min-width: 350px;
-  background: none;
-  .welcome-text{
-    margin-top: 20px;
-    text-align: center;
-    top: 0;
-    left: 20px;
-    font-size: 20px;
-    font-family: "Poppins", "Odoo Unicode Support Noto", sans-serif;
-    font-weight: 600;
-    line-height: 36px;
-    .text-o-color-1{
-      color: var(--baseColor);
-      font-style: italic;
-    }
-  }
-}
-.auth-image img {
-  max-width: 80%;
-  height: auto;
-  display: block;
-}
-.separator {
-  width: 2px;
-  height: 60%;
-  background-color: #ccc;
-  margin: 0 30px;
-  align-self: center;
-}
-.auth-form-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: var(--baseColor);
-  position: relative;
-}
-.auth-form {
-  width: 400px;
-  min-width: 320px;
-  margin: 0 auto;
-  padding: 30px 25px;
-  background-color: #ffffff;
-  border: 1px solid #e1e1e1;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.auth-form .heading {
-  text-align: center;
-  margin-bottom: 25px;  
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 40px;
-  color: #babecc;
-  text-shadow: 1px 1px 0px #ffffff;
-
-}
-.form-group {
-  margin-bottom: 2rem;
-  .eye-btn{
-    top: 11px;
-    width: 24px;
-    height: 24px;
-    right: 15px;
-    border: none;
-    background: transparent;
-  }
-}
-label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 500;
-  color: #444;
-}
-input.form-control {
-  margin-top: 6px;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  height: 48px;
-  width: 100%;
-  border: none;
-  background: #f0f0f3;
-  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff;
-  border-radius: 120px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  text-shadow: 1px 1px 0px #ffffff;
-}
-input.form-control:focus {
-  border-color: #007bff;
-  outline: none;
-}
-.error {
-  color: red;
-  font-size: 13px;
-  margin-top: 4px;
-}
-.auth-form-header{
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
-  color: var(--toggleBg);
-  text-shadow: 1px 1px 0px #ffffff;
-  font-style: italic;
-  text-align: center;
-  margin-bottom: 4rem;
-  display: none;
-}
-@media (max-width: 900px) {
-  .auth-container {
-    flex-direction: column;
-    min-height: 100vh;
-  }
 
   .auth-image {
-    display: none !important;
-  }
-  .auth-form-header{
-    display: block;
-  }
-  .auth-form-container {
-    width: 100vw;
-    min-width: 0;
-    min-height: 100vh;
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    width: 49.5%;
+    min-width: 350px;
     background: none;
+
+    img {
+      max-width: 80%;
+      height: auto;
+      display: block;
+    }
+
+    .welcome-text {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 20px;
+      font-family: "Poppins", "Odoo Unicode Support Noto", sans-serif;
+      font-weight: 600;
+      line-height: 36px;
+
+      .text-o-color-1 {
+        color: var(--baseColor);
+        font-style: italic;
+      }
+    }
   }
 
-  .auth-form {
-    max-width: 100vw;
-    width: 100vw;
-    min-height: 100vh;
-    border-radius: 0;
-    box-shadow: none;
-    border: none;
-    padding: 40px 18px;
+  .auth-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--baseColor);
+    position: relative;
+
+    .auth-form {
+      width: 400px;
+      min-width: 320px;
+      margin: 0 auto;
+      padding: 30px 25px;
+      background-color: #ffffff;
+      border: 1px solid #e1e1e1;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .auth-form-header {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        color: var(--toggleBg);
+        text-shadow: 1px 1px 0px #ffffff;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 4rem;
+        display: none;
+      }
+
+      .heading {
+        text-align: center;
+        margin-bottom: 25px;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 40px;
+        color: #babecc;
+        text-shadow: 1px 1px 0px #ffffff;
+      }
+
+      .form-group {
+        margin-bottom: 2rem;
+
+        label {
+          display: block;
+          margin-bottom: 6px;
+          font-weight: 500;
+          color: #444;
+        }
+
+        .form-control {
+          margin-top: 6px;
+          padding: 0 2.5rem;
+          height: 48px;
+          width: 100%;
+          border: none;
+          background: #f0f0f3;
+          box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff;
+          border-radius: 120px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          text-shadow: 1px 1px 0px #ffffff;
+
+          &:focus {
+            border-color: #007bff;
+            outline: none;
+          }
+        }
+
+        .error {
+          color: red;
+          font-size: 13px;
+          margin-top: 4px;
+        }
+
+        .position-relative {
+          position: relative;
+
+          .eye-btn {
+            position: absolute;
+            top: 11px;
+            right: 15px;
+            width: 24px;
+            height: 24px;
+            border: none;
+            background: transparent;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
   }
 
-  .auth-form-header{
-    display: block;
+  @media (max-width: 900px) {
+    flex-direction: column;
+
+    .auth-image {
+      display: none !important;
+    }
+
+    .auth-form-container {
+      width: 100vw;
+      min-height: 100vh;
+      background: none;
+
+      .auth-form {
+        width: 100vw;
+        min-height: 100vh;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 40px 18px;
+
+        .auth-form-header {
+          display: block;
+        }
+      }
+    }
   }
 }

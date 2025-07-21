@@ -1,62 +1,74 @@
 @import '../../../../styles/variables.scss';
 
-.tableContainerDashboard{
-    max-height: 25vh;
-    background: var(--light);
-}
-.sectionc-top{
-    background: var(--light);
-}
-.infoHeaderDashboard{
-    margin-bottom: 1rem;
-}
-.headerColor{
-    color: var(--dark);
-}
-.table-container-1{
-    background: var(--light) !important;
-}
-.table-responsive thead th {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    background-color: $color-dark;
-    color: #fff;
+.sectionc-top {
+  background: var(--light);
+  padding: 1.5rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem !important;
   }
-.employee-info-header {
-    position: sticky;
-    top: 0;
-    background: var(--light);
-    z-index: 20;
-    padding: 1rem 0;
-    margin: 0;
-    font-weight: 600;
-    margin-bottom: 1rem;
 }
-@media only screen and (max-width:800px) {
-    #no-more-tables tbody,
-    #no-more-tables tr,
-    #no-more-tables td {
-        display: block;
-    }
-    #no-more-tables thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-    #no-more-tables td {
-        position: relative;
-        padding-left: 50%;
-        border: none;
-        border-bottom: 1px solid #eee;
-    }
-    #no-more-tables td:before {
-        content: attr(data-title);
-        position: absolute;
-        left: 6px;
-        font-weight: bold;
-    }
-    #no-more-tables tr {
-        border-bottom: 1px solid #ccc;
-    }
+
+.employee-info-header {
+  position: sticky;
+  top: 0;
+  background: var(--light);
+  z-index: 20;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.headerColor {
+  color: var(--dark);
+}
+
+.table-container {
+  max-height: 50vh;
+  overflow-y: auto;
+  overflow-x: auto;
+  background: var(--light);
+  border: 1px solid #dee2e6;
+}
+
+/* Sticky table header */
+.table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: $color-dark;
+  color: #fff;
+}
+
+/* Responsive styles for mobile */
+@media only screen and (max-width: 800px) {
+  #no-more-tables tbody,
+  #no-more-tables tr,
+  #no-more-tables td {
+    display: block;
+    width: 100%;
+  }
+
+  #no-more-tables thead {
+    display: none;
+  }
+
+  #no-more-tables td {
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  #no-more-tables td:before {
+    content: attr(data-title);
+    position: absolute;
+    left: 6px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
 }

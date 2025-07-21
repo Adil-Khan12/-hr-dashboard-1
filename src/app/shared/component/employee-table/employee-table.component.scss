@@ -7,6 +7,10 @@
   @media (max-width: 768px) {
     padding: 1rem !important;
   }
+  .tableContainerDashboard{
+    max-height: 25vh;
+    background: var(--light);
+}
 }
 
 .employee-info-header {
@@ -27,7 +31,7 @@
 }
 
 .table-container {
-  max-height: 50vh;
+  max-height: 75vh;
   overflow-y: auto;
   overflow-x: auto;
   background: var(--light);

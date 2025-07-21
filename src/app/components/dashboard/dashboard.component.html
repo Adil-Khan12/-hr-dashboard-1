@@ -1,0 +1,37 @@
+<main class="main-dashboard">
+	<div class="head-title">
+		<div class="left">
+			<h1>Dashboard</h1>
+		</div>
+	</div>
+
+	<app-summary-status [summary]="summary"></app-summary-status>
+
+	<div class="recent-chart row mt-5 mb-4">
+		<!-- Recent Activities -->
+		<div class="col-md-6 d-flex">
+			<app-recent-activities [activities]="activities" class="w-100"></app-recent-activities>
+		</div>
+
+		<!-- Chart -->
+		<div class="col-md-6 d-flex">
+			<div class="card w-100">
+				<div class="card-body">
+					<h5 class="card-title text-center">Employee Status Distribution</h5>
+					<app-performance-chart
+						[chartData]="employeeStatusChartData"
+						chartTitle="Employee Status Distribution"
+						chartType="doughnut"
+						yAxisLabel="Number of Employees">
+					</app-performance-chart>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<app-employee-table
+		[infoHeaderDashboard]="'infoHeaderDashboard'"
+		[tableContainerDashboard]="'tableContainerDashboard'"
+		[className]="'container-fluid bg-light pt-4 pb-2 rounded-2 mb-2 table-container-1'">
+	</app-employee-table>
+</main>

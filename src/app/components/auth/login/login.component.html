@@ -1,0 +1,45 @@
+<div class="auth-container">
+  <div class="auth-image">
+    <img src="assets/amleLogic.svg" alt="Logo" />
+    <h1 class="welcome-text">
+      Streamline Your Workforce with <br>
+      <span class="text-o-color-1">PeoplePulse</span>
+      Comprehensive HR Management
+   </h1>
+  </div>
+  <!-- <div class="separator"></div> -->
+  <div class="auth-form-container flex-grow-1">
+
+    <div class="auth-form">
+      <div class="auth-form-header">
+        WorkZen
+      </div>
+      <h2 class="heading">Login</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="text" formControlName="username" placeholder="Enter your username" class="form-control" />
+          <div *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.invalid" class="error">
+            Username is required.
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label>Password</label>
+          <div class="position-relative">
+
+            <input placeholder="Enter your password" [type]="openEye ? 'text':'password'" formControlName="password" class="form-control" />
+            <button type="button" (click)="openEye = !openEye" class="position-absolute eye-btn">
+              <img [src]="_commonService.Image.EYE_OPEN" *ngIf="openEye" class=" w-100 h-100">
+              <img [src]="_commonService.Image.EYE_SLASH" *ngIf="!openEye" class=" w-100 h-100">
+            </button>
+          </div>
+          <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="error">
+            Password is required.
+          </div>
+        </div>
+        <app-button label="Login" type="submit" class="primary-btn"></app-button>
+      </form>
+    </div>
+  </div>
+</div>

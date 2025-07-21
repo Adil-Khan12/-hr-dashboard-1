@@ -1,0 +1,12 @@
+<div>
+    <h4 class="summary-text">Summary Status</h4>
+<ul class="box-info">
+    <li *ngFor="let item of summary">
+        <i [ngClass]="getIconClass(item?.title || '')"></i>
+        <span class="text">
+            <h3>{{ item?.value }}</h3>
+            <p>{{ item?.title }}</p>
+        </span>
+    </li>
+</ul>
+</div>

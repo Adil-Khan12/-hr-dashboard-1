@@ -1,0 +1,68 @@
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .main-content {
+    flex-grow: 1;
+    padding: 1rem;
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+
+  app-sidebar {
+    background-color: #f8f9fa;
+  }
+
+  app-navbar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  app-footer {
+    width: 100%;
+  }
+
+  .d-flex {
+    display: flex;
+  }
+
+  .flex-grow-1 {
+    flex-grow: 1;
+  }
+}
+.sidebar {
+  width: 15%;
+  min-width: 60px;
+  max-width: 300px;
+  transition: width 0.3s;
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: 20%;
+  }
+  @media (min-width: 401px) and (max-width: 768px) {
+		width: 25%;
+	}
+
+  &.collapsed {
+    width: 60px;
+  }
+}
+.navbar-mainapp {
+  flex: 1 1 0;
+  transition: width 0.3s;
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: calc(100% - 20%);
+  }
+  @media (min-width: 401px) and (max-width: 768px) {
+		width: calc(100% - 25%);
+	}
+}
+.d-flex {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+  min-height: 0;
+}
+

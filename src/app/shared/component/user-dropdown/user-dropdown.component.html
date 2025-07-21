@@ -1,0 +1,18 @@
+<div class="user-dropdown-wrapper" (click)="toggleDropdown()">
+    <div class="dropdown">
+        <button class="user-dropdown dropdown-toggle no-style-btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          <img [src]="user?.userImage" alt="User" class="profile-img" />
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li class="dropdown-item">{{ user?.name }} ({{ user?.role }})</li>
+          <li class="dropdown-item">
+            <a (click)="logout()" class="logout">
+              <i class='bx bxs-log-out-circle'></i>
+              <span class="text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+  </div>
+  

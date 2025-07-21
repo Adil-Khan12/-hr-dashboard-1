@@ -1,0 +1,21 @@
+.card{
+ background: var(--light);
+ .card-title{
+    color: var(--dark);
+ } 
+}
+.text-container {
+    line-height: 28px;
+    color: var(--dark);
+}
+.scroll-area {
+    max-height: 290px;
+    overflow-y: auto;
+    @media (min-width: 769px) and (max-width: 1024px) {
+        max-height: 300px;
+    }
+    @media (min-width: 401px) and (max-width: 768px) {
+        max-height: 200px;
+    }
+}
+  

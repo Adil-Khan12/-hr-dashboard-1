@@ -1,0 +1,73 @@
+@import "../../../../styles/variables.scss";
+
+.summary-text {
+    text-align:end;
+    @media (max-width: 1024px) {
+        text-align: start;
+        font-size: 16px;
+      }
+      @media (max-width: 768px) {
+            text-align: start;
+            font-size: 14px;
+        }
+}
+.box-info {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	grid-gap: 24px;
+	margin-top: 36px;
+  
+	@media (max-width: 576px) {
+	  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+  }
+  
+ .box-info li {
+	padding: 18px 14px;
+	background: var(--light);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	grid-gap: 24px;
+  }
+  
+ .box-info li .bx {
+	width: 60px;
+	height: 60px;
+	border-radius: 10px;
+	font-size: 26px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+ .box-info li:nth-child(1) .bx {
+	background: var(--light-blue);
+	color: var(--blue);
+  }
+  
+ .box-info li:nth-child(2) .bx {
+	background: #aceac7;
+	color: $color-success;
+  }
+  
+ .box-info li:nth-child(3) .bx {
+	background: var(--light-orange);
+	color: var(--orange);
+  }
+  
+ .box-info li:nth-child(4) .bx {
+	background: var(--light-yellow);
+	color: var(--yellow);
+  }
+  
+ .box-info li .text h3 {
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--dark);
+  }
+  
+ .box-info li .text p {
+	color: var(--dark);
+	font-size: 14px;
+  }

@@ -43,7 +43,6 @@
       align-items: center;
     }
 
-    // Custom background + color per item index
     &:nth-child(1) .bx {
       background: var(--light-blue);
       color: var(--blue);

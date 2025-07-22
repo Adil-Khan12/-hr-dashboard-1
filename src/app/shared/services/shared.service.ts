@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class SharedService {
-  private searchQuery$ = new BehaviorSubject<string>(''); // default ''
+  private searchQuery$ = new BehaviorSubject<string>('');
   private _sidebarHidden = new BehaviorSubject<boolean>(false);
   sidebarHidden$ = this._sidebarHidden.asObservable();
   

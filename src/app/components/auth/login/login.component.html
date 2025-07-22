@@ -8,15 +8,11 @@
    </h1>
   </div>
   <div class="auth-form-container flex-grow-1">
-
     <div class="auth-form">
-      <div class="auth-form-header">
-        WorkZen
-      </div>
       <h2 class="heading">Login</h2>
       <form class="form-container" [formGroup]="loginForm" (ngSubmit)="submitLogin()">
         <div class="form-group">
-          <label>Email</label>
+          <label>User Name</label>
           <input type="text" formControlName="username" placeholder="Enter your username" class="form-control" />
           <div *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.invalid" class="error">
             Username is required.
@@ -37,7 +33,9 @@
             Password is required.
           </div>
         </div>
-        <app-button label="Login" type="submit" class="primary-btn"></app-button>
+        <div class="submit-btn">
+          <app-button label="Login" type="submit" class="primary-btn"></app-button>
+        </div>
       </form>
     </div>
   </div>

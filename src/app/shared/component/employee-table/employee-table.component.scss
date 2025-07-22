@@ -7,10 +7,11 @@
   @media (max-width: 768px) {
     padding: 1rem !important;
   }
-  .tableContainerDashboard{
+
+  .tableContainerDashboard {
     max-height: 25vh;
     background: var(--light);
-}
+  }
 }
 
 .employee-info-header {
@@ -21,6 +22,7 @@
   font-weight: 600;
   padding-bottom: 1rem;
   margin-bottom: 0;
+
   @media (max-width: 768px) {
     font-size: 14px;
   }
@@ -38,7 +40,6 @@
   border: 1px solid #dee2e6;
 }
 
-/* Sticky table header */
 .table thead th {
   position: sticky;
   top: 0;
@@ -47,8 +48,8 @@
   color: #fff;
 }
 
-/* Responsive styles for mobile */
 @media only screen and (max-width: 800px) {
+
   #no-more-tables tbody,
   #no-more-tables tr,
   #no-more-tables td {

@@ -14,7 +14,6 @@ import { EmployeesComponent } from './components/employees/employees.component';
 import { EmployeesModule } from './components/employees/employees.module';
 import { TooltipDirective } from './directives/tooltip.directive';
 import { LoginComponent } from './components/auth/login/login.component';
-import { SignupComponent } from './components/auth/signup/signup.component';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonComponent } from './shared/component/button/button.component';
@@ -37,7 +36,6 @@ import { ToastrModule } from 'ngx-toastr';
     EmployeesComponent,
     TooltipDirective,
     LoginComponent,
-    SignupComponent,
     ButtonComponent,
     PerformanceChartComponent,
     EmployeeTableComponent,

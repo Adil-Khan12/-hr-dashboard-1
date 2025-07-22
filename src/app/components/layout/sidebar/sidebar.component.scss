@@ -193,7 +193,7 @@
       left: calc(100% - (25px - 4px) - 2px);
       background: #0d1f17;
 	  @media (max-width: 1024px) {
-      left: calc(100% - (25px - 4px) - 6px);
+      left: calc(100% - (25px - 4px) - -6px);
       }
     }
   }

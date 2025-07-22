@@ -37,7 +37,7 @@ export class DashboardComponent implements OnInit {
     });
 
     return Object.keys(statusCounts).map(status => ({
-      label: status.charAt(0).toUpperCase() + status.slice(1), // Capitalize first letter
+      label: status.charAt(0).toUpperCase() + status.slice(1),
       value: statusCounts[status]
     }));
   }

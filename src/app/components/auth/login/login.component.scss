@@ -20,6 +20,16 @@
       max-width: 80%;
       height: auto;
       display: block;
+      @media (max-width: 576px) {
+        margin-top: 3rem;
+        max-width: 70%;
+      }
+      @media (min-width: 576px) and (max-width: 600px) {
+        max-width: 44%;
+      }
+      @media (min-width: 601px) and (max-width: 768px) {
+        max-width: 88%;
+      }
     }
 
     .welcome-text {
@@ -29,6 +39,9 @@
       font-family: "Poppins", "Odoo Unicode Support Noto", sans-serif;
       font-weight: 600;
       line-height: 36px;
+      @media (max-width: 576px) {
+        display: none;
+      }
 
       .text-o-color-1 {
         color: var(--baseColor);
@@ -58,17 +71,12 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-
-      .auth-form-header {
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 40px;
-        color: var(--toggleBg);
-        text-shadow: 1px 1px 0px #ffffff;
-        font-style: italic;
-        text-align: center;
-        margin-bottom: 4rem;
-        display: none;
+      @media (max-width: 576px) {
+        justify-content: start;
+        min-height: auto;
+        .auth-form{
+          min-height: 100vh;
+        }
       }
 
       .heading {
@@ -83,12 +91,18 @@
 
       .form-group {
         margin-bottom: 2rem;
+        @media (max-width: 576px) {
+          margin-bottom: 1.5rem;
+         }
 
         label {
           display: block;
           margin-bottom: 6px;
           font-weight: 500;
           color: #444;
+          @media (max-width: 576px) {
+            margin-bottom: 15px;
+          }
         }
 
         .form-control {
@@ -138,31 +152,35 @@
       }
     }
   }
-
+  @media (max-width: 576px) {
+    .auth-form-container{
+      display:block;
+    }
+  }
   @media (max-width: 900px) {
     flex-direction: column;
 
     .auth-image {
-      display: none !important;
+      background: #ffffff;
+      width: 100%;
     }
 
     .auth-form-container {
       width: 100vw;
-      min-height: 100vh;
       background: none;
 
       .auth-form {
         width: 100vw;
-        min-height: 100vh;
         border: none;
         border-radius: 0;
         box-shadow: none;
         padding: 40px 18px;
-
-        .auth-form-header {
-          display: block;
-        }
       }
     }
+  }
+}
+.submit-btn{
+  @media (max-width: 576px) {
+   margin-top: 3rem;
   }
 }

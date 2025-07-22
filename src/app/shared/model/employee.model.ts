@@ -8,7 +8,7 @@ export interface Employee {
   department: string;
   manager: string;
   location: string;
-  joining_date: string; // or Date, if you choose to use Date objects
+  joining_date: string;
   salary: number;
   status: Status;
 }
